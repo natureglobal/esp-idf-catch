@@ -1,0 +1,2 @@
+# Need some more main stack
+CONFIG_MAIN_TASK_STACK_SIZE=8192
