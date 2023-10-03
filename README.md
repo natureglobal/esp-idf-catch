@@ -4,7 +4,7 @@ A template project to use Catch2 unittest framework on ESP-IDF.
 
 ## prerequisites
 
-- curl: to download single header version of Catch2 (catch.hpp)
+- curl: to download single header/single file version of Catch2 (`catch_amalgamated.{hpp, cpp}`)
 
 ## build & run
 
@@ -13,13 +13,6 @@ For CMake build system:
 ```
 $ idf.py build
 $ idf.py flash monitor
-```
-
-For Makefile build system:
-
-```
-$ make
-$ make flash monitor
 ```
 
 Then, you can see test passed log in console.
@@ -33,16 +26,9 @@ All tests passed (1 assertion in 1 test case)
 
 ## Tested environment
 
-- ESP-IDF v4.4.1
-- ESP32-DevKitC
-
-## Note
-
-If you use ESP-IDF v3.x, then you may need to define the following macro to avoid a bug in gcc 5.4.
-
-```cpp
-#define CATCH_CONFIG_NO_CPP11_TO_STRING
-```
+- ESP-IDF v5.2
+- ESP32-S3
+- ESP32
 
 ## License
 
