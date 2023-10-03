@@ -6,7 +6,7 @@ idf_component_register(
      INCLUDE_DIRS "${CATCH_FOLDER}")
 
 add_compile_definitions(CATCH_CONFIG_NO_POSIX_SIGNALS CATCH_CONFIG_DISABLE_EXCEPTIONS)
-add_compile_options(-Wno-unused-function)
+target_compile_options("${COMPONENT_LIB}" PRIVATE -Wno-unused-function)
 
 # Header and CPP file for Catch must be downloaded
 add_custom_command(
